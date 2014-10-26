@@ -16,6 +16,7 @@ pifacecommon==4.0.0
 pifacedigitalio==3.0.4
 -e git+https://github.com/inducer/pudb.git@2d5ac4199af687123bd78df28827904ae65560a4#egg=pudb-master
 pyOpenSSL==0.13.1
+pygame==1.9.2pre
 pygobject==3.14.0
 pyserial==2.7
 python-daemon==1.5.5

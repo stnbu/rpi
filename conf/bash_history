@@ -1203,3 +1203,325 @@ git status
 git commit -am 'remove uninteresting files. simplify/clean up sample files.'
 git status
 ls
+./conf/copy_config.sh 
+git status
+cd ../
+git status
+cd mainline
+git status
+git commit -am 'add sound module.'
+git push
+ls
+editor ~/.bashrc 
+cd ~/git/stnbu/dot/
+git status
+git commit -m 'check for existence of python support' .vim/plugin/*.vim
+git status
+git diff .bashrc
+export PYTHONPATH=~/git/stnbu/rpi/
+export 'export PYTHONPATH=~/git/stnbu/rpi/' > ~/.bashrc.local
+echo 'export PYTHONPATH=~/git/stnbu/rpi/' > ~/.bashrc.local
+cat ~/.bashrc.local
+. ~/.bashrc
+dpkg -l '*boost*' | grep ^i
+apt-cache search -n ^boost
+apt-cache search -n boost
+apt-cache search -n boost | grep -v '^libboost'
+. ~/.bashrc
+editor ~/.bashrc
+. ~/.bashrc
+editor ~/.bashrc
+. ~/.bashrc
+echo $PYTHONPATH 
+cd ~/git/stnbu/dot/
+ls
+git status
+git diff README.md
+git diff .vimrc
+git diff .vim/ftplugin/python.vim
+git commit -m 'use python in path' .vim/ftplugin/python.vim
+git status
+find .ipython/profile_default/static/
+editor .gitignore 
+git status
+git commit -m 'ignore more ipython stuf' .gitignore 
+git status
+git diff .bashrc
+git commit -m 'use a ~/.bashrc.local if present.' .bashrc 
+git status
+git commit -m 'some helpful instructions' README.md
+git diff
+git status
+git push
+cd ~/git/mainline
+ls
+mkdir myrpi
+git mv *.py myrpi/
+git touch myrpi/__init__.py
+touch myrpi/__init__.py
+git status
+git add myrpi/__init__.py 
+git status
+git commit -am 'package-ify'
+git push
+echo $PYTHONPATH 
+ls myrpi/
+ls myrpi/dsm
+editor myrpi/dsm.py
+cat myrpi/dsm.py
+ps axu | grep -i py
+kill 684
+ps axu | grep -i py
+ls -latr /tmp/
+ls -latr /tmp/raspiweb/
+ls -latr /tmp/raspiweb/raspiweb.log 
+cat /tmp/raspiweb/raspiweb.log
+ls -latr /tmp/raspiweb/
+ls -latr /tmp/raspiweb/pid 
+cat /tmp/raspiweb/pid
+ps axu | grep -i py
+ls -latr /tmp/raspiweb/pid 
+cat /tmp/raspiweb/pid
+kill 756
+rm /tmp/raspiweb/*
+cat /tmp/raspiweb/pid
+cat /tmp/raspiweb/raspiweb.log 
+ps axu | grep -i py
+kill 778
+cat /tmp/raspiweb/pid
+cat /tmp/raspiweb/pid.lock 
+cat /tmp/raspiweb/pid*
+cat /tmp/raspiweb/raspiweb.log 
+ps axu | grep -i py
+rm /tmp/raspiweb/*
+ps axu | grep -i py
+cat /tmp/raspiweb/pid*
+cat /tmp/raspiweb/pid
+cat /tmp/raspiweb/pid.lock 
+kill 841
+ls -ltr /tmp/raspiweb/
+ps axu | grep -i py
+ls -ltr /tmp/raspiweb/
+cat /tmp/raspiweb/raspiweb.log 
+rm /tmp/raspiweb/*
+ls -ltr /tmp/raspiweb/
+cat /tmp/raspiweb/raspiweb.log 
+ls -ltr /tmp/raspiweb/
+rm /tmp/raspiweb/raspiweb.log 
+cat /tmp/raspiweb/raspiweb.log 
+ls -ltr /tmp/raspiweb/
+ls -ltr /tmp/raspiweb/log 
+cat /tmp/raspiweb/log
+ps axu | grep -i py
+sudo netstat -pan  --ip
+cat /tmp/raspiweb/pid
+ps axu | grep -i py
+kill 897
+ls -ltr /tmp/raspiweb/log 
+ls -ltr /tmp/raspiweb/
+rm /tmp/raspiweb/*
+ls -ltr /tmp/raspiweb/
+cat /tmp/raspiweb/raspiweb.log 
+ps axu | grep -i py
+ls /tmp/raspiweb/
+find /tmp/raspiweb/
+cat /tmp/raspiweb/pid.lock 
+editor myrpi/webapp.py
+reset
+ls
+ps axu | grep -i py
+kill 941 933
+ps axu | grep -i py
+python myrpi/webapp.py start
+ls -l /tmp/raspiweb/
+ls -l /tmp/raspiweb/pid
+cat /tmp/raspiweb/pid
+python myrpi/webapp.py stop
+cat /tmp/raspiweb/pid
+find /tmp/raspiweb/
+rm -i /tmp/raspiweb/*
+python myrpi/webapp.py stop
+python myrpi/webapp.py stop
+echo $?
+python myrpi/webapp.py start
+ls -latr /tmp/raspiweb/
+ls -latr /tmp/raspiweb/pid
+cat /tmp/raspiweb/pid
+ps axu | grep 1019
+python myrpi/webapp.py stop
+ps axu | grep -i py
+find /tmp/raspiweb/
+cat /tmp/raspiweb/raspiweb.log 
+rm /tmp/raspiweb/raspiweb.log 
+python myrpi/webapp.py
+python myrpi/webapp.py start
+tail /tmp/raspiweb/raspiweb.log 
+python myrpi/webapp.py stop
+ps axu | grep -i py
+kill 1070
+ps axu | grep -i py
+kill 1067
+rm -i /tmp/raspiweb/*
+python myrpi/webapp.py start
+python myrpi/webapp.py stop
+ps axu | grep -i py
+kill 1101
+python myrpi/webapp.py start
+ps axu | grep -i py
+python myrpi/webapp.py stop
+ps axu | grep -i py
+python myrpi/webapp.py start
+ps axu | grep -i py
+cat /tmp/raspiweb/pid
+python myrpi/webapp.py restart
+ps axu | grep -i py
+cat /tmp/raspiweb/pid
+git status
+editor ~/.gitignore
+cd ~/
+ln -s git/stnbu/dot/.gitignore ./
+cd -
+git status
+editor ~/.gitignore 
+ls -latr ~/.gitignore 
+less ~/.gitignore
+rm *.pyc */*.pyc
+git status
+git diff myrpi/dsm.py
+git commit -m 'make importable, re-usable.' myrpi/dsm.py
+git status
+editor myrpi/webapp.py 
+git add myrpi/webapp.py 
+git rm myrpi/www.py 
+git status
+git commit -am 'fancier web app/server. remove unused www.py.'
+git push
+stty -F /dev/ttyAMA0 115200
+cat </dev/ttyAMA0 | od -x'
+cat </dev/ttyAMA0 | od -x
+man od
+apt-get install telnet
+sudo apt-get install telnet
+ls /dev/ttyAMA0 
+telnet /dev/ttyAMA0
+man telnet
+                                                                                              python myrpi/webapp.py stop
+sudo /etc/init.d/gpsd  stop
+sudo gpsd /dev/ttyAMA0 -n -N -D 3 -F /var/run/gpsd.sock
+less ~/.bash_history 
+sudo editor /etc/inittab 
+ps axu | grep -i py
+ps axu | grep -i gps
+lsmod | grep gps
+sudo netstat -pan  --ip
+history | grep -B 5 'sudo gpsd' | pager 
+runlevel 
+sudo telinit 2
+sudo gpsd /dev/ttyAMA0 -n -N -D 3 -F /var/run/gpsd.sock
+history | grep -B 5 'sudo gpsd' | pager 
+grep gpsd ~/.bash_history 
+strings ~/.bash_history | grep gpsd
+strings ~/.bash_history | grep gpsd | grep 999
+strings ~/.bash_history | grep gpsd | grep 99
+cat /etc/default/gpsd 
+strings ~/.bash_history | grep gpsd | grep -e D
+sudo /usr/sbin/gpsd -D 2 -N -n -F /var/run/gpsd.sock /dev/ttyAMA0
+less ~/.bash_history 
+systemctl 
+strings ~/.bash_history | grep gpsd 
+sudo sh -v /etc/init.d/gpsd start
+less /etc/init.d/gpsd 
+more /etc/init.d/gpsd
+. /lib/init/vars.sh
+. /lib/lsb/init-functions
+. /etc/default/gpsd 
+sudo /etc/init.d/gpsd  stop
+sudo /usr/sbin/gpsd -D 2 -N -n -F /var/run/gpsd.sock /dev/ttyAMA0
+grep systemct ~/.bash_history 
+grep  -t systemct ~/.bash_history 
+man grep
+grep  -a systemct ~/.bash_history 
+ps axu
+sudo sh -v /etc/init.d/gpsd start
+ps axu
+cgps -s
+less ~/.bash_history 
+grep -a gpsd ~/.bash_history
+grep -a gpsd ~/.bash_history | grep -e -D
+sudo gpsd /dev/ttyAMA0 -n -N -D 3 -F /var/run/gpsd.sock
+grep -a gpsd ~/.bash_history | grep -e -D | uniq 
+sudo gpsd /dev/ttyAMA0 -n -N -D 3 -F /var/run/gpsd.sock
+sudo /usr/sbin/gpsd -D 2 -N -n -F /var/run/gpsd.sock /dev/ttyAMA0
+sudo gpsd /dev/ttyAMA0 -n -N -D 3 -F /var/run/gpsd.sock
+sudo /usr/sbin/gpsd -D 2 -N -n -F /var/run/gpsd.sock /dev/ttyAMA0
+systemctl_redirect 
+systemctl_redirect gpsd.service stop
+sudo systemctl_redirect gpsd.service stop
+gpsctl -n /dev/tty
+cgps -s
+gpsctl /dev/ttyAMA0 
+sudo gpsctl /dev/ttyAMA0 
+sudo -i
+pip list video capt
+pip search videocap
+ls ~/source/
+cd ~/source/
+git clone https://github.com/xamox/pygame.git
+cd pygame/
+ls
+ls -ld *inst*
+less install.
+less install.txt 
+python setup.py develop
+apt-cache search sdl dev
+sudo apt-get install libsdl2-dev 
+python setup.py develop
+exit
+sudo -i
+exit
+exit
+sudo apt-get install libsdl2-dev libsdl1.2-dev
+apt-cache search python cv2
+apt-cache search python opencv
+apt-cache show python-opencv
+pip search opencv
+cd ~/source/
+python setup.py develop
+echo $?
+ls -latr
+find /home/pi/virtualenv/current/ -newer .git/
+ipython
+pip uninstall pygame
+ipython
+python setup.py install
+less install.txt 
+grep -i depend *
+less readme.rst 
+grep -i camera *
+find . -iname '*camera*'
+git clone https://github.com/Itseez/opencv.git
+editor myrpi/webcam1.py
+python
+editor myrpi/webcam1.py
+ls ~/git/mainline/photo.bmp 
+readlink -f ~/git/mainline/photo.bmp
+ls
+cd opencv/
+ls
+find -iname *.py
+find -iname setup.py
+ls
+less README.md 
+sudo apt-get install python-opencv
+sudo apt-get install python-numpy
+exit
+editor myrpi/webcam1.py
+exit
+ls -latr /tmp/
+readlink -f /tmp/output.avi 
+rm /tmp/output.avi 
+editor myrpi/webcam1.py
+editor myrpi/webcam3.py
+git status
+rm photo.bmp 
+git add myrpi/webcam*.py
