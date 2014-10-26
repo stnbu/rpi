@@ -1,0 +1,8 @@
+/etc/default/gpsd
+/etc/inittab
+/etc/network/interfaces
+/etc/modules
+/boot/cmdline.txt
+/boot/config.txt
+/etc/apt/sources.list
+/etc/debian_version
