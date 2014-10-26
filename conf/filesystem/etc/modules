@@ -4,6 +4,6 @@
 # at boot time, one per line. Lines beginning with "#" are ignored.
 
 snd-bcm2835
-
+snd-pcm-oss
 w1-gpio
 w1-therm

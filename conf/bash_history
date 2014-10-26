@@ -1153,3 +1153,53 @@ git commit -am 'adding conf files and script to gen conf info.'
 git push
 ./copy_config.sh 
 ./conf/copy_config.sh 
+git status
+git add conf/bash_history 
+git commit -am 'include bash_history. capture python version.'
+git push
+ls
+cat 123.py 
+ls
+sudo editor /etc/modules
+cd ~/.vim/bundle/
+YouCompleteMe/
+ls
+ls -l *.sh
+cd YouCompleteMe/
+./install
+editor copy_config.sh
+cd ..
+ls
+cat bzz.py 
+git rm bzz.py 
+ls bzz.py
+cat laser.py 
+git rm laser.py
+ls
+cat gps.txt 
+git rm gps.txt
+ls
+cat sensors_.py 
+git rm sensors_.py
+git status
+ls -1 *.py
+cat simple_cam.py 
+cat vc.py 
+cat w1.py 
+ls
+cat wavplay.py 
+editor wavplay.py
+ls -l
+cat www.py 
+editor www.py
+ls -l
+./install.sh 
+cat service.py 
+ls
+git mv service.py callback.py
+git status
+git add wavplay.py www.py 
+git status
+git commit -am 'remove uninteresting files. simplify/clean up sample files.'
+git status
+ls
