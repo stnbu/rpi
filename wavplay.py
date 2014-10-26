@@ -1,13 +1,7 @@
 import os
 from wave import open as waveOpen
 from ossaudiodev import open as ossOpen
-try:
-    from ossaudiodev import AFMT_S16_NE
-except ImportError:
-    if byteorder == "little":
-        AFMT_S16_NE = ossaudiodev.AFMT_S16_LE
-    else:
-        AFMT_S16_NE = ossaudiodev.AFMT_S16_BE
+from ossaudiodev import AFMT_S16_NE
 
 def wav_to_dsp(wav_path):
 
