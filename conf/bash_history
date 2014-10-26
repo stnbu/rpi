@@ -1,0 +1,1155 @@
+ifconfig 
+sudo -i
+passwd 
+sudo -i
+exit
+mkdir ~/.ssh/
+editor ~/.ssh/authorized_keys
+exit
+df -h
+touch a_timestamp
+source ~/.bashrc 
+which python
+ls -latr /etc/
+find /etc/ -type f -newer fstab
+find /etc/ -type f -newer /etc/fstab
+find /etc/ ! -type d -newer /etc/fstab
+cd source/
+git clone 'https://github.com/pypa/pip.git'
+cd pip/
+python -V
+python setup.py develop
+mkdir -p ~/git/stnbu
+ssh-keygen 
+cat ~/.ssh/id_rsa.pub 
+cd ~/git/stnbu/
+git clone 'git@github.com:stnbu/rpi.git'
+sudo cp -ai /root/k.py rpi/simple_cam.py
+ls rpi/simple_cam.py
+git add rpi/simple_cam.py
+cd rpi/
+git add simple_cam.py
+git status
+which python
+rm -i /tmp/video.h264 /tmp/image.jpg 
+sudo rm -f /tmp/video.h264 /tmp/image.jpg 
+python simple_cam.py 
+cp -ai /etc/fstab ~/fresh_timestamp
+ls
+which python
+python -V
+python simple_cam.py 
+exit
+mkdir source
+cd source
+apt-get install python-virtualenv 
+sudo apt-get install python-virtualenv 
+virtualenv ~/virtualenv
+rm -rf ~/virtualenv/
+python2.7 -V
+virtualenv -p /usr/bin/python2.7 ~/virtualenv/
+editor ~/.bashrc 
+source ~/.bashrc
+echo 'source ~/virtualenv/bin/activate' >> ~/.bashrc 
+cat ~/.bashrc
+. ~/.bashrc
+dpkg -l 'python-*'
+dpkg -l 'python-*' | grep ^i
+pip list
+pip search picamera
+dpkg -l 'python-*' | grep ^i | grep pi
+dpkg -l 'python-*' | grep ^i | grep pi | sed 's/.*-//'
+dpkg -l 'python-*' | grep ^i | grep pi | sed 's/.*on-//'
+dpkg -l 'python-*' | grep ^i | grep pi | sed 's/.*on-//' | awk '{print $1}'
+dpkg -l 'python-*' | grep ^i | grep pi | sed 's/.*on-//' | awk '{print $1}' | xargs 
+pip install picamera pifacecommon pifacedigitalio pip rpi.gpio
+pip install picamera  pifacedigitalio pip rpi.gpio
+echo $?
+sudo apt-get install build-essential 
+sudo apt-get install build-essential gcc
+sudo apt-get install build-essential gcc python2.7-dev 
+pip install picamera  pifacedigitalio pip rpi.gpio
+exit
+ls -latr /tmp//
+sudo shutdown -h now
+sudo apt-get install gpsd gpsd-clients python-gps
+sudo editor /boot/cmdline.txt
+sudo editor /etc/inittab
+sudo shutdown  -h now
+dmesg 
+sudo killall gpsd
+sudo gpsd /dev/ttyAMA0 -F /var/run/gpsd.sock
+ls -l /var/run/gpsd.sock
+cgps -s
+sudo shutdown  -h now
+sudo killall gpsd
+sudo gpsd /dev/ttyAMA0 -F /var/run/gpsd.sock
+cgps -s
+sudo shutdown  -h now
+sudo killall gpsd
+sudo gpsd /dev/ttyAMA0 -F /var/run/gpsd.sock
+dmesg 
+ls -latr /var/log/
+ls -latr /var/log/messages 
+cat /var/log/messages
+ps axu | grep -i gpsd
+cgps -s
+man gpsd
+cgps -s
+man gpsd
+cgps -s
+sudo killall gpsd
+man gpsd
+#sudo gpsd /dev/ttyAMA0 -n -N -D 2 -F /var/run/gpsd.sock
+man gpsd
+#sudo gpsd /dev/ttyAMA0 -n -N -D 2 -F /var/run/gpsd.sock
+man gpsd
+sudo gpsd /dev/ttyAMA0 -n -N -D 2 -F /var/run/gpsd.sock
+cgps -s
+man cgps
+cgps -D 2 -s
+man cgps
+cgps 
+cgps -D 2 
+cgps -D 2 > /tmp/fdasfads
+grep /var /tmp/fdasfads
+grep /dev /tmp/fdasfads
+cat /tmp/fdasfads
+strings /tmp/fdasfads
+strings /tmp/fdasfads | pager 
+sudo shutdown  -h now
+sudo killall gpsd
+sudo gpsd /dev/ttyAMA0 -n -N -D 2 -F /var/run/gpsd.sock
+man gpsd
+gpspipe -j
+man gpspipe 
+gpspipe -j
+gpspipe -h
+man gpspipe 
+man gpsd
+man gpsctl 
+ps axu | grep gps
+gpsctl /dev/ttyAMA0
+man cgps
+exit
+cgps -s
+cgps -D -s
+man cgps
+sudo gpsd /dev/ttyAMA0 -n -N -D 2 -F /var/run/gpsd.sock
+sudo killall gpsd
+ps axu | grep -i gpsd
+sudo editor /etc/default/gpsd
+###sudo gpsd /dev/ttyAMA0 -n -N -D 2 -F /var/run/gpsd.sock
+ls -latr /dev/tty*
+###sudo gpsd /dev/ttyAMA0 -n -N -D 2 -F /var/run/gpsd.sock
+ls -l /dev/tty*A*
+sudo editor /etc/default/gpsd
+less /etc/init.d/gpsd 
+sudo editor /etc/default/gpsd
+/etc/init.d/gpsd stop
+/etc/init.d/gpsd start
+sudo /etc/init.d/gpsd start
+ps axu | grep -i gpsd
+cgps -s
+ls -latr /var/log/
+ls -latr /var/log/messages 
+less /var/log/messages
+grep -i gpsd /var/log/messages
+sudo /etc/init.d/gpsd stop
+ps axu | grep -i gpsd
+sudo gpsd /dev/ttyAMA0 -n -N -D 3 -F /var/run/gpsd.sock
+sudo shutdown  -h now
+man cgps
+man gpsmon
+gpsmon 
+cat /etc/apt/sources.list
+dpkg -S gpsd
+dpkg -l '*gps*' | grep ^i
+apt-cache show gpsd gpsd-clients 
+history | grep gps
+history | grep gps | cut -c 8-
+history | grep gps | cut -c 8- | sort -u
+history | grep gps | cut -c 8- | sort -u > /tmp/nnnnnn
+editor /tmp/nnnnnn
+mv -i /tmp/nnnnnn ~/git/stnbu/rpi/gps.txt
+sudo shutdown  -h now
+exit
+lsusb 
+sudo editor /etc/wpa.conf
+chmod 0600 /etc/wpa.conf
+sudo chmod 0600 /etc/wpa.conf
+sudo editor /etc/network/interfaces 
+sudo iwconfig 
+sudo iwlist wlan0 scan | less
+sudo ifup wlan0
+ifconfig 
+ifdown wlan0
+sudo ifdown wlan0
+sudo ifup wlan0
+sudo ifdown --force wlan0
+sudo ifup wlan0
+sudo shutdown -r now
+sudo ifdown --force wlan0
+ifconfig 
+sudo ifdown wlan0
+less /var/log/syslog 
+man -k wpa conf
+man -k wpa.conf
+cat /etc/wpa.conf 
+sudo editor /etc/wpa.conf
+sudo ifdown --force wlan0
+ps axu | grep -iE 'net'
+ps axu | grep -iE 'wpa'
+ps axu | grep -iE 'wlan'
+sudo ifup wlan0
+sudo shutdown -r now
+ifconfig 
+sudo iwconfig
+lsusb 
+sudo apt-get install firmware-ralink 
+##sudo apt-get install firmware-ralink  > /etc/wpa_supplicant/wpa_supplicant.conf 
+sudo -i
+sudo shutdown  -r now
+ifconfig 
+sudo ifdown --force wlan0
+sudo ifup wlan0
+ifconfig 
+exit
+sudo editor /etc/network/interfaces 
+sudo shutdown  -r now
+ifconfig 
+cat /etc/network/interfaces 
+sudo -i
+exit
+sudo shutdown -h now
+sudo killall gpsd
+ps axu | grep -i gpsd
+sudo gpsd /dev/ttyAMA0 -n -N -D 3 -F /var/run/gpsd.sock
+cgps -s
+sudo shutdown -h now
+cgps -s
+sudo killall gpsd
+sudo gpsd /dev/ttyAMA0 -n -N -D 3 -F /var/run/gpsd.sock
+sudo shutdown -h now
+dmesg 
+ls source/
+editor git/stnbu/rpi/
+editor git/stnbu/rpi/oggplay.py
+mv -i git/stnbu/rpi/oggplay.py git/stnbu/rpi/wavplay.py
+mv -i /tmp/1.wav git/stnbu/rpi/
+editor git/stnbu/rpi/wavplay.py 
+exit
+python ~/git/stnbu/rpi/oggplay.py 
+readlink /tmp/1.ogg 
+cp -ai /tmp/1.ogg ~/git/stnbu/rpi/
+python ~/git/stnbu/rpi/oggplay.py 
+readlink -f /tmp/1.wav 
+python ~/git/stnbu/rpi/oggplay.py 
+alsamixer 
+sudo apt-get install oss-compat
+apt-get update 
+sudo apt-get update 
+sudo modprobe snd-pcm-oss 
+python ~/git/stnbu/rpi/oggplay.py 
+alsamixer 
+python ~/git/stnbu/rpi/oggplay.py 
+alsamixer 
+python ~/git/stnbu/rpi/oggplay.py 
+python ~/git/stnbu/rpi/wavplay.py 
+exit
+editor git/stnbu/rpi/rgb.py
+python git/stnbu/rpi/rgb.py 
+sudo python git/stnbu/rpi/rgb.py 
+sudo shutdown -h now
+sudo modprobe wl-gpio
+sudo modprobe w1-gpio
+sudo modprobe w1-therm
+ls /sys/bus/w1/devices/
+ls /sys/bus/w1/devices/w1_bus_master1
+find /sys/bus/w1/devices/w1_bus_master1
+find /sys/bus/w1/devices/w1_bus_master1/
+find /sys/
+find /sys/ | grep 10-
+find /sys/ | grep -e -000
+find /sys/ | grep -e -000 | grep /slab/
+find /sys/ | grep -e -000 | grep -v /slab/
+find /sys/bus/w1/devices/w1_bus_master1/ -iname '*slave*'
+cat /sys/bus/w1/devices/w1_bus_master1/w1_master_slaves
+cat /sys/bus/w1/devices/w1_bus_master1/w1_master_slaves 
+cat /sys/bus/w1/devices/w1_bus_master1/w1_master_slave_count
+sudo shutdown -h now
+sudo modprobe w1-gpio
+sudo modprobe w1-therm
+cat /sys/bus/w1/devices/w1_bus_master1/w1_master_slaves 
+sudo shutdown -h now
+cd git/stnbu/rpi/
+ls
+cp -ai rgb.py laser.py
+editor laser.py 
+python laser.py
+sudo python laser.py
+editor laser.py 
+sudo python laser.py
+editor laser.py 
+sudo python laser.py
+sudo shutdown -h now
+cd git/stnbu/rpi/
+ls
+editor laser.py 
+sudo editor /etc/vim/vimrc
+editor laser.py 
+sudo editor /etc/vim/vimrc
+sudo python laser.py 
+sudo shutdown -h now
+cd git/stnbu/rpi/.git/
+cd ..
+ls
+editor laser.py 
+sudo python laser.py 
+editor laser.py 
+sudo python laser.py 
+sudo shutdown -h now
+cd git/stnbu/rpi/
+ls
+cat laser.py 
+editor laser.py
+python laser.py 
+sudo python laser.py 
+deactivate 
+which python
+python -V
+sudo python laser.py 
+grep -i gpio *
+sudo shutdown -h now
+cd -
+cd git/stnbu/rpi/
+sudo python laser.py 
+sudo shutdown -h now
+cd git/stnbu/rpi/
+sudo python laser.py 
+sudo shutdown -h now
+cd git/stnbu/rpi/
+editor rgb.py 
+sudo python rgb.py
+sudo shutdown -h now
+sudo python git/stnbu/rpi/rgb.py 
+sudo shutdown -h now
+sudo python git/stnbu/rpi/rgb.py 
+find /etc/ -newer fresh_timestamp 
+find /etc/ -newer fresh_timestamp  -type f | less
+find /etc/ -newer fresh_timestamp  -type f 
+cat /etc/inittab 
+find /etc/ -newer fresh_timestamp  -type f 
+ls /boot/cmdline.txt 
+cat /boot/cmdline.txt
+sudo shutdown -h now
+sudo python git/stnbu/rpi/rgb.py 
+find /boot/ /etc/ -newer fresh_timestamp  -type f 
+cat /boot/config.txt 
+raspi-config 
+sudo raspi-config
+sudo shutdown  -r now
+uptime 
+editor git/stnbu/rpi/rgb.py 
+sudo python git/stnbu/rpi/rgb.py
+editor git/stnbu/rpi/rgb.py 
+sudo python git/stnbu/rpi/rgb.py
+editor git/stnbu/rpi/rgb.py 
+sudo python git/stnbu/rpi/rgb.py
+editor git/stnbu/rpi/rgb.py 
+sudo python git/stnbu/rpi/rgb.py
+editor git/stnbu/rpi/rgb.py 
+sudo python git/stnbu/rpi/rgb.py
+editor git/stnbu/rpi/rgb.py 
+sudo python git/stnbu/rpi/rgb.py
+editor git/stnbu/rpi/rgb.py 
+sudo python git/stnbu/rpi/rgb.py
+sudo shutdown -h now
+editor git/stnbu/rpi/rgb.py 
+sudo python git/stnbu/rpi/rgb.py
+editor git/stnbu/rpi/rgb.py 
+sudo python git/stnbu/rpi/rgb.py
+editor git/stnbu/rpi/rgb.py 
+sudo python git/stnbu/rpi/rgb.py
+editor git/stnbu/rpi/rgb.py 
+sudo python git/stnbu/rpi/rgb.py
+editor git/stnbu/rpi/rgb.py 
+sudo python git/stnbu/rpi/rgb.py
+editor git/stnbu/rpi/rgb.py 
+sudo python git/stnbu/rpi/rgb.py
+sudo raspi-config
+sudo shutdown -h now
+cd git/stnbu/rpi/
+ls
+cat rgb.py wavplay.py > 123.py
+editor 123.py
+sudo python 123.py 
+sudo modprobe snd-pcm-oss 
+sudo python 123.py 
+alsamixer 
+sudo python 123.py 
+cp -ai rgb.py bzz.py
+editor bzz.py
+sudo python bzz.py
+editor bzz.py
+sudo python bzz.py
+editor bzz.py
+sudo python bzz.py
+sudo modprobe w1-therm
+sudo modprobe w1-gpio
+ls /sys/bus/w1/devices/
+ls /sys/bus/w1/devices/w1_bus_master1/w1_master_slaves 
+cat /sys/bus/w1/devices/w1_bus_master1/w1_master_slaves
+sudo shutdown  -r now
+sudo modprobe w1-gpio w1-therm
+lsmod | grep w1
+sudo modprobe w1-therm
+lsmod | grep w1
+cat /sys/bus/w1/devices/w1_bus_master1/w1_master_slaves
+sudo shutdown -h now
+sudo modprobe w1-therm
+lsmod | grep w1
+sudo modprobe w1-gpio
+lsmod | grep w1
+cat /sys/bus/w1/devices/w1_bus_master1/w1_master_slaves
+cat /sys/bus/w1/devices/28-00000616ba47
+cat /sys/bus/w1/devices/28-00000616ba47/w1_slave 
+sudo shutdown -h now
+ps axu
+touch /tmp/xx
+find / -newer /tmp/xx
+find ~/ -newer /tmp/xx
+touch /tmp/xx
+find ~/ -newer /tmp/xx
+touch /tmp/xx
+find ~/ -newer /tmp/xx
+sudo raspi-config
+find ~/ -newer /tmp/xx
+cd ~/.vim/bundle/YouCompleteMe/
+ls
+./install.sh 
+sudo apt-get install build-essential 
+sudo apt-get install build-essential cmake
+./install.sh 
+ls -ltr /tmp/
+cd git/
+ls
+cd stnbu/
+ls
+git clone 'git@github.com:stnbu/dot.git'
+find
+cd ~/
+#ln -sf git/stnbu/dot/.vim ./
+mv -i .vim* /tmp/
+ln -s git/stnbu/dot/.vim ./
+ln -s git/stnbu/dot/.vimrc ./
+nano .vimrc 
+vim .vimrc
+ls .vim/
+ls .vim/ftplugin/
+vim .vimrc
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim .vimrc
+mv -i ~/.vim/bundle/Vundle.vim ~/.vim/bundle/vundle
+vim .vimrc
+sudo shutdown -h now
+which python
+cgps -s
+while true ; do cgps -s; done
+ls -latr /var/log/
+ls -latr /var/log/daemon.log 
+cat /var/log/daemon.log
+while true ; do cgps -s; done
+exit
+sudo gpsd /dev/ttyAMA0 -n -N -D 3 -F /var/run/gpsd.sock
+/etc/init.d/gpsd stop
+sudo gpsd /dev/ttyAMA0 -n -N -D 3 -F /var/run/gpsd.sock
+/etc/init.d/gpsd stop
+ps axu | grep gps
+fuser /dev/ttyAMA0 
+sudo find / -xdev -name '*.dpkg-new'
+man cgps 
+exit
+cat /proc/cpuinfo 
+cd git/stnbu/rpi/
+echo 'git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle' >> ~/git/stnbu/dot/README.md 
+pip search sensors
+pip install PySensors
+ls /etc/modprobe.d/
+find /etc/modprobe.d/
+find /etc/modprobe.d/ipv6
+cat /etc/modprobe.d/ipv6.conf 
+ls /etc/modules 
+cat /etc/modules
+echo sudo modprobe w1-gpio
+echo w1-gpio
+echo w1-therm
+sudo editor /etc/modules 
+exit
+cd git/stnbu/rpi/
+editor README.md
+less /home/pi/git/stnbu/dot/.vim/plugin/vim_git.vim
+vim /home/pi/git/stnbu/dot/.vim/plugin/vim_git.vim
+sudo -i
+which vim
+vim -V
+vim --version
+apt-cache search -n vim
+dpkg -l vim
+cat /etc/apt/sources.list
+sudo vim /etc/apt/sources.list
+apt-get update 
+sudo apt-get update 
+sudo apt-get -d dist-upgrade 
+aptitude install ctags
+sudo apt-get install ctags
+sudo apt-get  dist-upgrade 
+sudo apt-get install vim
+apt-cache show vim
+sudo apt-get  dist-upgrade 
+sudo apt-get  autoremove
+sudo apt-get  dist-upgrade 
+ls -altr /tmp/
+sudo shutdown -h now
+cd .vim/bundle/YouCompleteMe/
+./install.sh 
+cd 
+mv -i .bashrc x.bashrc 
+ln -s git/stnbu/dot/.bashrc ./
+cd -
+make clean
+make distclean
+git status
+git status --ignored
+ls doc/tags 
+mv doc/tags /tmp/
+git status --ignored
+ls -latr /tmp/
+rm -rf /tmp/ycm_build.kXk527/
+cd ~/git/stnbu/rpi/
+ls
+editor bzz.py 
+sudo python bzz.py
+ls -l
+cp -ai 123.py led.py
+editor led.py
+sudo python led.py
+editor led.py
+sudo python led.py
+editor led.py
+sudo modprobe w1-gpio
+sudo modprobe w1-therm
+cat /sys/bus/w1/devices/28-00000616ba47/w1_slave 
+ps axu | grep -i gps
+ls /dev/ttyAMA0 
+find / -xdev -name '*ttyAMA0*' 
+sudo find / -xdev -name '*ttyAMA0*' 
+sudo find / -varxdev -name '*ttyAMA0*' 
+sudo find /var -xdev -name '*ttyAMA0*' 
+sudo find /var/ -iname '*gps*'
+sudo gpsd /dev/ttyAMA0 -n -N -D 3 -F /var/run/gpsd.sock
+ls -ld /dev/ttyAMA0 
+chmod o+rw /dev/ttyAMA0
+sudo chmod o+rw /dev/ttyAMA0
+sudo gpsd /dev/ttyAMA0 -n -N -D 3 -F /var/run/gpsd.sock
+cat /etc/inittab 
+cat /boot/cmdline.txt 
+ls -l /boot/cmdline.txt
+date 
+sudo editor /boot/cmdline.txt 
+sudo editor /etc/inittab 
+ps axu | grep -i getty
+man telinit 
+sudo telinit q
+ps axu | grep -i getty
+sudo gpsd /dev/ttyAMA0 -n -N -D 3 -F /var/run/gpsd.sock
+/etc/init.d/gpsd start
+sudo /etc/init.d/gpsd start
+cat /etc/default/gpsd
+sudo /etc/init.d/gpsd  stop
+sudo /etc/init.d/gpsd  start
+ps axu | grep -i gps
+sudo /etc/init.d/gpsd  start
+ps axu | grep -i gps
+while true ; do cgps -s; done
+cp -ai etc.jic/default/gpsd /tmp/
+cat etc.jic/default/gpsd 
+sudo cp -ai etc.jic/default/gpsd /etc/default/
+sudo /etc/init.d/gpsd  stop
+sudo /etc/init.d/gpsd  start
+ps axu | grep -i gps
+while true ; do cgps -s; done
+grep -i gps /var/log/messages 
+sudo /etc/init.d/gpsd  stop
+sudo gpsd /dev/ttyAMA0 -n -N -D 3 -F /var/run/gpsd.sock
+ps axu | grep -i gps
+netstat -pa | grep gps
+sudo netstat -pa | grep gps
+ps axu | less
+ps axu | grep -i 3418
+sudo telinit q
+sudo netstat -pa | grep gps
+grep gps /etc/inittab 
+while true ; do cgps -s; done
+ls -ltr /etc/init.d/*gm*
+ls -ltr /etc/init.d/*dm*
+ps axu
+sudo grep -rl lightdm /etc/
+runlevel 
+editor /etc/inittab 
+sudo editor /etc/inittab 
+editor /boot/cmdline.txt 
+sudo editor /boot/cmdline.txt
+sudo editor /boot/config.txt 
+sudo grep -rl start_x /boot/ /etc/
+sudo editor /boot/config.txt 
+ls -latr /boot/
+runlevel 
+runlevel 2
+man telinit 
+sudo telinit 2
+ps axu
+less /etc/inittab 
+grep -i defau /etc/inittab
+grep -il wlan0 /var/log/*
+less /var/log/syslog 
+man logrotate 
+sudo /etc/cron.daily/logrotate 
+wc -l /var/log/syslog
+wc -l /var/log/dmesg
+echo -n ''> /var/log/dmesg
+sudo -i
+sudo netstat -pa | grep gps
+sudo gpsd /dev/ttyAMA0 -n -N -D 3 -F /var/run/gpsd.sock
+ps axu
+ps axu | grep -i gps
+sudo grep -rl gpsd /etc/
+sudo -i
+virtualenv -p /usr/bin/python2.7 ~/virtualenv/current/
+exit
+which python
+rm /home/pi/virtualenv/current/lib/python2.7/no-global-site-packages.txt
+editor git/stnbu/rpi/bzz.py 
+sudo python git/stnbu/rpi/bzz.py
+cat /sys/bus/w1/devices/28-00000616ba47/w1_slave 
+cgps -s
+ls source/
+rm -rf source/
+df -h
+runlevel 
+touch /tmp/tfd
+sudo raspi-config
+cat /boot/config.txt 
+cat /boot/cmdline.txt 
+find /boot/ /etc/ ! -type d -newer /tmp/tfd 
+diff -uB /etc/inittab /home/pi/etc.jic/inittab 
+editor /home/pi/etc.jic/inittab
+sudo editor /home/pi/etc.jic/inittab
+shutdown -r now
+cgps -s
+top
+cd .vim/bundle/
+cd YouCompleteMe/
+runlevel 
+ps axu 
+sudo telinit 2
+ps axu 
+ps axu | grep -i gps
+sudo gpsd /dev/ttyAMA0 -n -N -D 3 -F /var/run/gpsd.sock
+./install.sh 
+git status --ignored
+##nohup ./install.sh > /tmp/ycm.log 2>&1 &
+ls -latr /tmp/
+rm -rf /tmp//ycm_build.QBtuLt/
+nohup ./install.sh > /tmp/ycm.log 2>&1 &
+cat /tmp/ycm.log 
+editor
+dpkg -l 'vim*'
+cat /tmp/ycm.log 
+sudo apt-get install vim-nox
+vim.nox 
+pip install git
+cd ~/.vim/bundle/YouCompleteMe/
+nohup ./install.sh > /tmp/ycm.log 2>&1 &
+sudo apt-get install gpsd gpsd-clients python-gps
+sudo apt-get install python-git
+cd ~/.vim/bundle/YouCompleteMe/
+nohup ./install.sh > /tmp/ycm.log 2>&1 &
+editor install.sh 
+ls -latr /tmp//
+cat /tmp/ycm.log 
+sudo apt-get remove --dry-run --auto-remove --purge libx11-6 
+sudo apt-get remove --dry-run --auto-remove --purge libx11-6 > /tmp/wowwwwwwww
+cat /tmp/ycm.log 
+editor install.sh 
+cgps -s
+exit
+nohup ./install.sh > /tmp/ycm.log 2>&1 &
+exit
+cat /tmp/ycm.log 
+which python
+python -V
+dpkg -l 'python*dev*'
+dpkg -l 'python*dev*' | grep -i 2.7
+dpkg -l 'python*dev*' | grep -i 6i
+dpkg -l 'python*dev*' | grep -i ^i
+sudo -i
+decode_tm6000 
+which py
+which python
+deactivate 
+which python
+python2.7
+cd ~/.vim/bundle/YouCompleteMe/
+git status --ignored
+git pull
+less install.sh 
+ls
+nohup ./install.sh > /tmp/ycm.log 2>&1 &
+dpkg -l 'python*dev*' | grep -i ^i
+sudo apt-get install python-dev 
+fg 1
+git status --ignored
+ls -latr /tmp/
+rm -rf /tmp/ycm_build.*
+nohup ./install.sh > /tmp/ycm.log 2>&1 &
+man gpsd
+cat /tmp/ycm.log 
+editor /etc/default/gpsd 
+man gpsd
+ps axu | grep -i gps
+sudo editor /etc/default/gpsd 
+sudo /etc/init.d/gpsd  stop
+ps axu | grep -i gps
+sudo /etc/init.d/gpsd  start
+ps axu | grep -i gps
+sudo editor /etc/default/gpsd 
+cgps -s
+ls -latr /var/log/
+ls -latr /var/log/daemon.log 
+cat /var/log/daemon.log
+ls -latr /tmp/
+head /tmp/wowwwwwwww 
+ls -latr /tmp/
+ls -latr /tmp/ycm_build.sS1MMl/
+find /tmp/ycm_build.sS1MMl/ -name '*.sh'
+find /tmp/ycm_build.sS1MMl/ -type f
+ls
+ls -l python/
+less doc/
+less doc/youcompleteme.txt 
+ls install.sh 
+sudo apt-get remove --dry-run --auto-remove --purge libx11-6 > /tmp/wowwwwwwww 2>&1
+less install.sh
+cp -ai install.sh install2.sh 
+editor install2.sh
+./install2.sh 
+less /home/pi/.vim/bundle/YouCompleteMe/third_party/ycmd/build.sh
+## DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.dylib
+ls -l /usr/include/python2.7 /usr/lib/libpython2.7.dylib
+ls -dl /usr/include/python2.7 /usr/lib/libpython2.7.dylib
+find /usr/ /var/ -name '*libpython2.7.dylib*
+find /usr/ /var/ -name '*libpython2.7.dylib*'
+less /tmp/wowwwwwwww 
+editor /tmp/wowwwwwwww
+tr ' ' '\n' < /tmp/wowwwwwwww
+tr ' ' '\n' < /tmp/wowwwwwwww | sort -u
+tr ' ' '\n' < /tmp/wowwwwwwww | sort -u | grep -v '^lib'
+ps axu | less
+apt-cache show lxc
+apt-cache show lxde
+dpkg -l 'lxde*'
+dpkg -l 'lxde*' '*x11*'
+dpkg -l '*lxde*' '*x11*'
+dpkg -l '*lxde*' '*x11*' | grep ^i
+#sudo apt-get purge lxde-common x11-common
+ps axu | less
+apt-cache show openbox
+dpkg -l '*openbox*' | grep ^i
+find /usr/ /var/ -name '*libpython*dylib*'
+find /usr/ /var/ -name '*python*dylib*'
+sudo apt-get purge lxde-common x11-common openbox
+echo 'blt* epiphany-browser* gsfonts-x11* gstreamer1.0-plugins-bad* gvfs* gvfs-backends* gvfs-daemons* gvfs-fuse* idle* idle-python2.7* idle-python3.4* idle3* libaudio2* libfluidsynth1* libgtkglext1* libice6* liblightdm-gobject-1-0*
+  libmikmod3* libmotif-common* libmrm4* libobrender29* libobt2* libopencv-calib3d2.4* libopencv-contrib2.4* libopencv-core2.4* libopencv-features2d2.4* libopencv-flann2.4* libopencv-highgui2.4* libopencv-imgproc2.4*
+  libopencv-legacy2.4* libopencv-ml2.4* libopencv-objdetect2.4* libopencv-video2.4* libpulse0* libqscintilla2-8* libqt4-svg* libqtgui4* libqtwebkit4* libsdl-image1.2* libsdl-mixer1.2* libsdl-ttf2.0-0* libsdl1.2debian* libsm6*
+  libsmpeg0* libtk8.5* libtk8.6* libuil4* libwebkit2gtk-3.0-25* libwebkitgtk-3.0-0* libxaw7* libxklavier16* libxm4* libxmu6* libxss1* libxt6* libxtst6* libzbar0* lightdm* lightdm-gtk-greeter* lxde* lxde-common* lxde-core* obconf*
+  openbox* oracle-java8-jdk* pistore* pypy-setuptools* pypy-upstream* pypy-upstream-dev* python-pygame* python-tk* python3-tk* qjackctl* sonic-pi* supercollider* supercollider-ide* supercollider-language* timidity* tk8.5*
+  wolfram-engine* wpagui* x11-common* x11-utils* x11-xkb-utils* x2x* xfonts-encodings* xfonts-utils* xinit* xpdf* xserver-common* xserver-xorg* xserver-xorg-core* xserver-xorg-input-all* xserver-xorg-input-evdev*
+  xserver-xorg-input-synaptics* xserver-xorg-video-fbdev* zenity*' | sed -r 's/\*//g' | tr ' ' '\n'
+  xserver-xorg-input-synaptics* xserver-xorg-video-fbdev* zenity*' | sed -r 's/\*//g' | tr ' ' '\n' | sort -u
+echo 'blt* epiphany-browser* gsfonts-x11* gstreamer1.0-plugins-bad* gvfs* gvfs-backends* gvfs-daemons* gvfs-fuse* idle* idle-python2.7* idle-python3.4* idle3* libaudio2* libfluidsynth1* libgtkglext1* libice6* liblightdm-gobject-1-0*
+  libmikmod3* libmotif-common* libmrm4* libobrender29* libobt2* libopencv-calib3d2.4* libopencv-contrib2.4* libopencv-core2.4* libopencv-features2d2.4* libopencv-flann2.4* libopencv-highgui2.4* libopencv-imgproc2.4*
+  libopencv-legacy2.4* libopencv-ml2.4* libopencv-objdetect2.4* libopencv-video2.4* libpulse0* libqscintilla2-8* libqt4-svg* libqtgui4* libqtwebkit4* libsdl-image1.2* libsdl-mixer1.2* libsdl-ttf2.0-0* libsdl1.2debian* libsm6*
+  libsmpeg0* libtk8.5* libtk8.6* libuil4* libwebkit2gtk-3.0-25* libwebkitgtk-3.0-0* libxaw7* libxklavier16* libxm4* libxmu6* libxss1* libxt6* libxtst6* libzbar0* lightdm* lightdm-gtk-greeter* lxde* lxde-common* lxde-core* obconf*
+  openbox* oracle-java8-jdk* pistore* pypy-setuptools* pypy-upstream* pypy-upstream-dev* python-pygame* python-tk* python3-tk* qjackctl* sonic-pi* supercollider* supercollider-ide* supercollider-language* timidity* tk8.5*
+  wolfram-engine* wpagui* x11-common* x11-utils* x11-xkb-utils* x2x* xfonts-encodings* xfonts-utils* xinit* xpdf* xserver-common* xserver-xorg* xserver-xorg-core* xserver-xorg-input-all* xserver-xorg-input-evdev*
+  xserver-xorg-input-synaptics* xserver-xorg-video-fbdev* zenity*' | sed -r 's/\*//g' | tr ' ' '\n' | sort -u | grep -v '^lib'
+apt-cache show blt gvfs zenity timidity x2x 
+apt-cache show blt gvfs zenity timidity x2x  | pager 
+## DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.dylib
+vim /home/pi/.vim/bundle/YouCompleteMe/third_party/ycmd/build.sh
+## DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.dylib
+update-alternatives --config cc
+update-alternatives --config gcc
+sudo apt-get purge lxde-common x11-common openbox
+readlink -f /usr/bin/cc
+apt-cache search cmake
+dpkg -S /usr/lib/arm-linux-gnueabihf/libpython2.7.so
+sudo apt-get  autoremove
+find /usr/ -name '*libpython2.7.so*'
+ps axu
+ps axu | grep -vE 'make|/bin/c'
+netstat -pan 
+netstat -pan  --ip
+sudo netstat -pan  --ip
+free -m
+sudo raspi-config
+/home/pi/.vim/bundle/YouCompleteMe/third_party/ycmd/build.sh
+editor ~/.vimrc 
+apt-cache search netwo man
+dpkg -l '*netwo*man*'
+editor /etc/rc.local 
+sudo editor /etc/rc.local 
+ps axu
+sudo editor /etc/default/gpsd 
+ps axu | grep -i gps
+sudo /etc/init.d/gpsd  start
+gpscat 
+ps axu | grep -i gps
+cgps -s
+                      sudo aptitude install python-pysensors
+apt-cache search python sensors
+apt-cache search pysensors
+pip install pysensors
+apt-cache search python lmsenso
+apt-cache search -n lmsenso
+apt-cache search -n sensors
+sudo apt-get install lm-sensors 
+pip install pysensors
+cd git/stnbu/rpi/
+editor sensors_.py
+grep -irl 'local/b' ~/.vim/
+grep -irl 'local/b' ~/.vim/ftplugin/
+editor ~/.vim/ftplugin/python.vim 
+editor sensors_.py
+pkg -l lm-sensors 
+dpkg -L lm-sensors 
+sensors-detect 
+sudo sensors-detect 
+touch /tmp//fdsafsda
+sudo sensors-detect 
+sudo im-sensors sensors-detect pci-system
+sudo lm-sensors sensors-detect pci-system
+/opt/vc/bin/vcgencmd measure_temp
+ls /opt/vc/
+find /opt/vc/ -type f
+find /opt/vc/ -type f | less
+/opt/vc/bin/vcgencmd measure_temp
+echo /opt/vc/bin/vcgencmd measure_temp >> README.md
+pip search raspberry
+pip search w1
+pip install  rpitemp
+editor w11.py
+cd git/stnbu/rpi/
+python www.py 
+pip search daemonize
+apt-cache search python daemon
+sudo apt-get install python-daemon
+ls -l /usr/share/doc/python-daemon/
+ls -l /usr/share/doc/python-daemon/copyright 
+cat /usr/share/doc/python-daemon/copyright
+less /usr/share/doc/python-daemon/copyright
+python www.py 
+sudo netstat -pan  --ip
+editor www.py
+ls -ltar
+git status
+git add *.py *.txt
+cat gps.txt 
+gpsctl /dev/ttyAMA0 
+gpsmon 
+gpspipe -j
+gpspipe -h
+git status
+git add 1.wav README.md 
+rm 1.ogg 
+git status
+git commit -am 'some samples. some junk. just to get started.'
+git config --global user.email 'meburr@gmail.com'
+git config --global user.name "Mike Burr"
+git commit -am 'some samples. some junk. just to get started.'
+git status
+git push
+git status
+ls
+cat sensors_.py 
+pip search w1
+exit
+exit
+ps axu | grep -i gps
+sudo /etc/init.d/gpsd  stop
+ps axu | grep -i gps
+/usr/sbin/gpsd -D 2 -N -n -F /var/run/gpsd.sock /dev/ttyAMA0
+sudo /usr/sbin/gpsd -D 2 -N -n -F /var/run/gpsd.sock /dev/ttyAMA0
+less /etc/init.d/gpsd 
+editor  /etc/init.d/gpsd
+grep '^\.' /etc/init.d/gpsd
+dmesg | less
+ls -ltr $(ls gps /var/log/*)
+less /var/log/daemon.log 
+date 
+less /var/log/syslog
+grep gps /var/log/syslog
+less /var/log/messages 
+ps axu | grep -i gps
+less /etc/init.d/gpsd 
+sh -w /etc/init.d/gpsd start
+sh -v /etc/init.d/gpsd start
+sudo sh -v /etc/init.d/gpsd start
+ps axu | grep -i gps
+ls -ltr $(ls gps /var/log/*)
+less /var/log/messages
+cgps -s
+man systemctl
+cgps -s
+gpsmon /dev/ttyAMA0 
+man gpsmon
+man ssh
+xgps
+xclock
+xgps
+gpsmon /dev/ttyAMA0 
+man gpsmod
+man gpsmon 
+gpsmon /dev/ttyAMA0 
+sudo -i
+cd git/
+ln -s stnbu/rpi ./mainline
+cd mainline
+ls
+less ~/.bashrc 
+exit
+ls
+git status
+/opt/vc/bin/vcgencmd measure_temp
+/opt/vc/bin/vcgencmd 
+/opt/vc/bin/vcgencmd -h
+/opt/vc/bin/vcgencmd commands
+/opt/vc/bin/vcgencmd commands | grep get
+/opt/vc/bin/vcgencmd measure_temp
+pip list | grep -i w1
+pip search w1
+mkdir source
+cd source
+git clone 'https://github.com/ipython/ipython.git'
+cd ipython/
+which python
+python setup.py develop
+cd ~/
+ln -s git/stnbu/dot/.ipython ./
+ls -latr
+pip list
+pip search w1
+editor temp.py
+cd source/
+hg clone http://hg.code.sf.net/p/raspberry-gpio-python/code raspberry-gpio-python-code
+ls
+cd raspberry-gpio-python-code/
+ls
+python setup.py develop
+less INSTALL.txt 
+pwd
+python -V
+which python
+python setup.py develop
+python setup.py --help-commands
+ipython --classic
+python setup.py install
+echo $?
+less /var/log/messages 
+ipython --classic
+ipython 
+ls -latr ~/.vim/swaps/
+find ~/.vim/swaps/
+ls
+ls -ltr
+editor pins.py 
+git status
+mv pins.py constants.py
+git rm w11.py 
+mv w12.py w1.py
+git add w1.py 
+git status
+git add constants.py 
+cat temp.py 
+mv -i temp.py vc.py
+git status
+git add vc.py 
+rm *.pyc
+ls
+mv -i /tmp/gpiosb.png ./
+ls
+git add gpiosb.png 
+git status
+git commit -am 'more libs, consts, ref image'
+git push
+git config --global push.default simple
+ls
+cat 123.py 
+ls -l
+grep '\.wav' *.py
+sudo modprobe snd-pcm-oss 
+editor wavplay.py 
+git status
+ls -latr
+cat simple_cam.py 
+man od 
+cat </dev/ttyAMA0 | od -x
+ps axu | grep -i AMA
+sudo grep -rl AMA /boot/ /etc/
+cat /etc/inittab 
+stty -F /dev/ttyAMA0 115200
+cat </dev/ttyAMA0 | od -x
+editor www.py 
+pgrep cat
+ps axu | grep cat
+cd ~/source/
+svn co 'http://svn.code.sf.net/p/pyserial/code/trunk/pyserial/' ./
+svn co 'http://svn.code.sf.net/p/pyserial/code/trunk/pyserial/' ./pyserial
+sudo apt-get install subversion
+svn co 'http://svn.code.sf.net/p/pyserial/code/trunk/pyserial/' ./pyserial
+ls pyserial/
+ls
+cd pyserial/
+python setup.py develop
+python setup.py install
+ipython --classic
+ps axu | grep -i AMA
+ps axu | grep -itty
+ps axu | grep -i tty
+###cat </dev/ttyAMA0 | od -x
+###stty -F /dev/ttyAMA0 115200
+ps axu | grep py
+kill 
+ls -latr /tmp/
+less /tmp/al.log 
+sort /tmp/al.log | uniq -c
+sort /tmp/al.log | uniq -c | sort -n
+sort /tmp/onof.log | uniq -c | sort -n
+stty -F /dev/ttyAMA0 115200
+cat </dev/ttyAMA0 | od -x
+stty -F /dev/ttyAMA0 115200
+cat </dev/ttyAMA0 | od -x
+stty -F /dev/ttyAMA0 115200
+cat </dev/ttyAMA0 | od -x
+stty -F /dev/ttyAMA0 115200
+cat </dev/ttyAMA0 | od -x
+cat </dev/ttyAMA0 | od -x'
+cp -ai ~/git/mainline/dsm.py ~/tmp/
+mkdir ~/tmp/
+cp -ai ~/git/mainline/dsm.py ~/tmp/
+cp -ai ~/git/mainline/dsm.py ~/tmp/dsm2.py 
+cd ..
+git clone https://github.com/inducer/pudb.git
+cd pudb/
+python setup.py develop
+ipython --classic
+cd ~/git/mainline
+python -m pudb.run dsm.py 
+editor dsm.py
+cp -ai ~/git/mainline/dsm.py ~/tmp/dsm3.py 
+git status
+git add dsm.py 
+git commit -m 'simple dsm protocol analyzer' dsm.py 
+git status
+git diff
+git commit -am 'make things more reusable'
+git push
+grep 8 ~/tmp/dsm*
+git diff
+git commit -am 'beautify output'
+git push
+editor motion.py
+sudo python motion.py 
+cat bzz.py 
+sudo python motion.py 
+mv -i motion.py service.py
+git add service.py 
+git status
+git commit -am 'simple callback example'
+git push
+sudo python service.py 
+ls -latr /etc/
+cd /
+ls -latr /etc/
+echo etc/default/gpsd etc/inittab  etc/network/interfaces 
+ls -latr /etc/
+ls -latr /etc/ | less
+echo etc/default/gpsd etc/inittab  etc/network/interfaces etc/modules
+ls -latr /etc/ | less
+echo etc/default/gpsd etc/inittab  etc/network/interfaces etc/modules > /tmp/fazz
+editor /tmp/fazz
+rsync -r --include-from=/tmp/fazz --exclude='*' --delete-excluded / /tmp/nogzz
+find /tmp/nogzz
+find /tmp/nogzz/
+ls /tmp/nogzz/
+cat /tmp/fazz 
+rsync -vr --include-from=/tmp/fazz / /tmp/nogzz
+find /tmp/nogzz
+rm -rf /tmp/nogzz/*
+rsync -vr --files-from=/tmp/fazz / /tmp/nogzz
+find /tmp/nogzz
+find /tmp/nogzz -type f
+cd
+echo /boot/cmdline.txt /boot/config.txt
+echo /boot/cmdline.txt /boot/config.txt >> /tmp/fazz 
+editor /tmp/fazz
+rsync -vr --files-from=/tmp/fazz / /tmp/nogzz
+cd git/mainline
+mkdir conf
+mv -i /tmp/fazz conf/rsync_files.list
+echo 'rsync -vr --files-from=/tmp/fazz / /tmp/nogzz' > conf/copy_config.sh
+ls /etc/apt/sources.list /etc/debian_version 
+ls -1 /etc/apt/sources.list /etc/debian_version 
+ls -1 /etc/apt/sources.list /etc/debian_version  >> conf/rsync_files.list 
+editor conf/copy_config.sh
+ls
+cd conf/
+ls
+chmod rsync_files.list 
+chmod 0755 rsync_files.list
+./rsync_files.list 
+editor rsync_files.list 
+cd conf/
+ls
+editor copy_config.sh 
+cd conf/
+ls
+echo rsync_files.list >> copy_config.sh 
+chmod 0755 conf/copy_config.sh 
+conf/copy_config.sh
+chmod 0644 conf/rsync_files.list 
+./conf/copy_config.sh 
+find conf/ -type f
+less conf/dpkg_get_selections 
+pip list
+pip freeze
+echo pip freeze >> conf/copy_config.sh 
+which python
+echo which python >> conf/copy_config.sh 
+cd conf/
+ls
+rm -rf filesystem/ dpkg_get_selections 
+./conf/copy_config.sh 
+./copy_config.sh 
+find . -type f
+git add * */*
+git status
+git add * */* */*/*
+git status
+cd ..
+git status
+git commit -am 'adding conf files and script to gen conf info.'
+git push
+./copy_config.sh 
+./conf/copy_config.sh 

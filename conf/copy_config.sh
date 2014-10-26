@@ -8,4 +8,5 @@ pip freeze > "$HERE/pip.freeze"
 
 rm -f "$HERE/python_info"
 which python >> "$HERE/python_info"
-python -V >> "$HERE/python_info"
+python -V >> "$HERE/python_info" 2>&1
+cp -f ~/.bash_history "$HERE/bash_history"
