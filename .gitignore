@@ -1,2 +1,3 @@
-web/jquery/
-web/sencss/
+/web/jquery
+/web/sencss
+*.pyc
