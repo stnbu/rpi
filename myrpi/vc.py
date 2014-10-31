@@ -1,6 +1,8 @@
 
 import subprocess
 
+# see also /sys/class/thermal/thermal_zone*/
+
 def get_cpu_temp():
     cmd = "/opt/vc/bin/vcgencmd measure_temp"
     out = subprocess.check_output(cmd.split(), shell=False).strip()
