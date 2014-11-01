@@ -5,7 +5,7 @@ import daemon
 import argparse
 from daemon.pidlockfile import PIDLockFile
 from wsgiref.simple_server import make_server
-from raspiweb import raspiweb
+from raspiweb import RaspiWeb
 
 DEFAULT_OUT_PATH = os.path.join(os.path.sep, 'tmp', 'raspiweb')
 
@@ -74,8 +74,6 @@ def get_parser():
     return parser
 
 
-APP = raspiweb
-
 def stop(args):
 
     SIGTERM = 15
@@ -93,11 +91,13 @@ def main():
     args = get_parser().parse_args()
 
     if args.mode == 'start':
+        raspiweb = RaspiWeb()
         start(raspiweb, args)
     elif args.mode == 'stop':
         stop(args)
     elif args.mode == 'restart':
         stop(args)
+        raspiweb = RaspiWeb()
         start(raspiweb, args)
     else:
         raise ValueError('Unknown subcommand "{0}"'.format(args.mode))
