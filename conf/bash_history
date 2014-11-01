@@ -1525,3 +1525,232 @@ editor myrpi/webcam3.py
 git status
 rm photo.bmp 
 git add myrpi/webcam*.py
+./conf/copy_config.sh 
+git status
+git commit conf/*
+git add conf/*
+git commit -m 'conf file updates' conf/
+git commit -m 'various video/image capture libraries, test code' myrpi/webcam*.py
+git status
+git push
+cd ..
+ls -1tr
+cat ~/git/mainline/conf/pip.freeze 
+grep pygam ~/git/mainline/conf/pip.freeze
+editor README.md 
+editor /tmp/xxxxx
+sh /tmp/xxxxx
+cat /tmp/xxxxx
+ipython
+editor ~/git//mainline/README.md 
+apt-cache search python jquery
+apt-cache search python jquery | grep --color=always jquery
+apt-cache search python jquery | grep -i --color=always jquery
+apt-cache show python-xstatic-jquery python-pyquery | less
+ls
+cat README.md 
+editor README.md
+git status
+git diff
+git commit -am 'wishlist, ideas'
+git push
+cp -ai myrpi/dsm.py myrpi/dsm_two.py
+pip search console > /tmp/fdsfsfdsfdssafdsa
+less /tmp/fdsfsfdsfdssafdsa
+pip install console
+ps axu | grep -i vim
+ps axu | grep -i edit
+cat myrpi/dsm_two.py 
+sudo python myrpi/dsm_two.py
+pip uninstall console
+find /home/pi/virtualenv/ | grep console
+which pip
+pip uninstall console
+ls /home/pi/virtualenv/current/lib/python2.7/site-packages/console
+rm -rf /home/pi/virtualenv/current/lib/python2.7/site-packages/console*
+find /home/pi/virtualenv/ | grep console
+python myrpi/dsm_two.py
+editor myrpi/dsm_two.py 
+sudo apt-get install i2c-tools
+i2cdetect -l
+apt-cache search wayland
+apt-cache show xwayland 
+apt-cache show wayland 
+apt-cache show waston
+apt-cache show weston
+apt-cache search SenCSS
+mkdir web
+cd web
+git submodule add  https://github.com/Kilian/sencss/tree/master/source
+git submodule  https://github.com/Kilian/sencss.git 
+git submodule add https://github.com/Kilian/sencss.git 
+git status
+ls sencss/
+less ../.gitmodules 
+ls
+git submodule add https://github.com/jquery/jquery.git
+ls -1
+ls sencss/
+ls sencss/source/
+git status
+cd ..
+echo web/jquery web/sencss
+echo web/jquery web/sencss >> .gitignore
+editor .gitignore
+git status
+cat .gitignore 
+editor .gitignore
+git status
+git add .gitmodules 
+mv myrpi/dsm_two.py /tmp//
+git status
+git add .gitignore 
+git status
+git commit -m 'ignore submodule dirs' .gitmodules 
+git commit -m 'ignore submodule dirs' .gitignore 
+git status
+git push
+editor myrpi/webapp.py 
+ipython --classic
+exit
+editor README.md 
+ls -l
+git status
+git mv 1.wav myrpi/
+ls web/
+ls myrpi/webapp.py 
+grep -ri  textwidth ~/.vim/
+editor myrpi/webapp.py
+editor ~/.vimrc 
+editor myrpi/webapp.py
+ls
+ps axu | grep vim
+ps axu | grep edi
+top
+editor myrpi/webapp.py 
+exit
+ps axu | grep edi
+ps axu | grep vi
+mkdir ~/source/libboost
+cd ~/source/libboost
+git clone https://github.com/boostorg/boost.git
+ls
+cd boost/
+ls
+ls .gitmodules 
+cat .gitmodules
+ls
+git submodule init
+git pull
+cd ~/source/libboost/boost/
+ls
+du -sh .
+less INSTALL 
+apt-cache search bjam
+ls -l
+make fdsafdsa
+ls tools/
+ls tools/build/
+find . -name '*bjam*'
+less bootstrap.sh 
+./bootstrap.sh --help
+./bootstrap.sh --show-libraries
+less bootstrap.log 
+git submodule update 
+exit
+ls /sys/class/thermal/thermal_zone0/temp
+cat /sys/class/thermal/thermal_zone0/temp
+cat /sys/class/thermal_zone0/temp
+ls /sys/class/thermal/thermal_zone0/temp 
+cat /sys/class/thermal/thermal_zone0/temp
+grep /sys/ myrpi/*.py
+grep -i therm myrpi/*.py
+grep -i temp myrpi/*.py
+/opt/vc/bin/vcgencmd measure_temp
+cat /sys/class/thermal/thermal_zone0/temp
+/opt/vc/bin/vcgencmd 
+/opt/vc/bin/vcgencmd help
+/opt/vc/bin/vcgencmd -h
+/opt/vc/bin/vcgencmd commands
+/opt/vc/bin/vcgencmd display_power
+cat /sys/class/thermal/thermal_zone0/temp
+editor myrpi/vc.py 
+editor myrpi/webapp.py 
+ls -ltr /tmp/
+man mount
+exit
+python myrpi/webapp.py 
+python myrpi/webapp.py stop
+python myrpi/webapp.py start
+python myrpi/webapp.py restart
+python myrpi/webapp.py stop
+python myrpi/webapp.py start
+python myrpi/webapp.py stop
+python myrpi/webapp.py restart
+python myrpi/webapp.py start
+python myrpi/webapp.py restart
+python myrpi/webapp.py stop
+python myrpi/webapp.py start
+git status
+editor .gitignore 
+git status
+editor .gitignore 
+git status
+git diff myrpi/
+git status
+git commit  -m 'extensive changes/improvments' myrpi/webapp.py 
+git diff myrpi/vc.py
+git commit -m 'helpful comment' myrpi/vc.py
+git status
+git commit -m 'move annoying audio file' myrpi/1.wav 
+git status
+echo git -m 'move 1.wav' 1.wav
+git -m 'move 1.wav' 1.wav
+git  commit -m 'move 1.wav' 1.wav
+git status
+cat .gitignore 
+ls
+ls web/jquery/
+editor .gitignore 
+git status
+git commit -m 'dirs for submodules' web/*
+git status
+git add myrpi/raspiweb.py 
+git add README.md .gitignore 
+git status
+git diff -m 'ignore stuff' .gitignore
+git commit -m 'ignore stuff' .gitignore
+git status
+git README.md
+git diff README.md
+git commit -m 'wishlist' README.md 
+git commit -m 'separate module for wsgi app' myrpi/raspiweb.py 
+git status
+git push
+pip install lxml
+apt-cache search -n 'libxml*-dev'
+apt-cache search -n 'libxml.*-dev'
+aptitude install libxml2-dev
+sudo apt-get install libxml2-dev
+pip install lxml
+sudo apt-get install libxml2-dev libxslt1-dev
+pip install lxml
+ls web/sencss/source/sen.css 
+exit
+ls web/jquery/*.js
+ls web/jquery/*/*.js
+find web/ -iname '*jquery*'
+python myrpi/webapp.py start
+python myrpi/webapp.py restart -F
+pip install autopep8
+autopep8 myrpi/raspiweb.py
+autopep8 -i myrpi/raspiweb.py
+python myrpi/webapp.py restart -F
+autopep8 --help
+autopep8 --max-line-length=119 -i myrpi/raspiweb.py
+python myrpi/webapp.py restart -F
+ls /home/pi/git/stnbu/rpi/myrpi/web
+ls /home/pi/git/stnbu/rpi/web/
+python myrpi/webapp.py restart -F
+cd conf/
+ls

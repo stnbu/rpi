@@ -4,13 +4,16 @@ Pygments==2.0rc1
 RPi.GPIO==0.5.7
 argparse==1.2.1
 async==0.6.1
+autopep8==1.0.4
 gitdb==0.5.4
 gps==3.11
 -e git+https://github.com/ipython/ipython.git@59f77d02558ed9b42303d04a22c49a230f5c7159#egg=ipython-master
 lockfile==0.8
+lxml==3.4.0
 mcpi==0.1.1
 mercurial==3.1.2
 numpy==1.8.2
+pep8==1.5.7
 picamera==1.8
 pifacecommon==4.0.0
 pifacedigitalio==3.0.4

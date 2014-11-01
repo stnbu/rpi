@@ -134,6 +134,7 @@ gzip						install
 hardlink					install
 hicolor-icon-theme				install
 hostname					install
+i2c-tools					install
 idle-python3.2					deinstall
 ifplugd						install
 ifupdown					install
@@ -835,6 +836,7 @@ libxkbcommon-dev				install
 libxkbcommon0:armhf				install
 libxkbfile1:armhf				install
 libxml2:armhf					install
+libxml2-dev:armhf				install
 libxmlrpc-core-c3				deinstall
 libxmu6:armhf					install
 libxmuu1:armhf					install
@@ -847,7 +849,8 @@ libxrender1:armhf				install
 libxres1:armhf					install
 libxshmfence-dev:armhf				install
 libxshmfence1:armhf				install
-libxslt1.1:armhf				deinstall
+libxslt1-dev:armhf				install
+libxslt1.1:armhf				install
 libxss-dev:armhf				install
 libxss1:armhf					install
 libxt-dev:armhf					install
@@ -996,6 +999,7 @@ raspberrypi-bootloader				install
 raspbian-archive-keyring			install
 raspi-config					install
 raspi-copies-and-fills				install
+read-edid					install
 readline-common					install
 rename						install
 rpcbind						install
