@@ -1,15 +1,24 @@
 import serial
 import curses
+import calibration
 
-def format_channel_data(bytes):
+def get_channel_data(bytes):
     for index, byte in enumerate(bytes):
         if index % 2:  # if an odd member
             channel_id = last & 0b11111100
+            channel_id = channel_id >> 2  # first two bits are for something else
             last = last & 0b00000011  # mask the first 6 bits
             last = last << 8
             position = byte | last  # "append" byte to the last byte
             yield channel_id, position
         last = byte
+
+
+def format_channel_data(data):
+    for channel_id, position in data:
+        axis = calibration.data[channel_id]
+        yield channel_id, axis.get_normalized_position(position)
+
 
 
 def do_dsm():
@@ -33,11 +42,12 @@ def do_dsm():
                 bytes = bytes[-1:] + bytes[:-1]
                 bytes = map(ord, bytes)
 
-                channel_data = format_channel_data(bytes)
+                channel_data = get_channel_data(bytes)
+                channel_data = format_channel_data(channel_data)
 
                 s = ''
                 for channel_id, position in channel_data:
-                    s += 'c: {0}\t{1}\n'.format(channel_id, position)
+                    s += 'c: {0} {1}\t{2}\n'.format(channel_id, calibration.data[channel_id].name, position)
                 s += '\n'
                 s += '=' * 120
 
