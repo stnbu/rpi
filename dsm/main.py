@@ -19,11 +19,32 @@ def format_channel_data(data):
         axis = calibration.data[channel_id]
         yield channel_id, axis.get_normalized_position(position)
 
+class Handler(object):
+    """Should have __call__, setup, and cleanup methods.
+    """
 
 
-def do_dsm():
+class Visualizer(Handler):
 
-    with serial.Serial(port='/dev/ttyUSB0', baudrate=115200, bytesize=8, parity='N', stopbits=1) as ser:
+    def setup(self):
+        self.stdscr = curses.initscr()
+
+    def __call__(self, channel_data):
+        s = ''
+        for channel_id, position in channel_data:
+            s += 'c: {0} {1}\t{2}\n'.format(channel_id, calibration.data[channel_id].name, position)
+        s += '\n'
+        s += '=' * 120
+        self.stdscr.addstr(0, 0, s)
+        self.stdscr.refresh()
+
+    def cleanup(self):
+        curses.endwin()
+
+
+def do_dsm(port, handler=Visualizer()):
+
+    with serial.Serial(port=port, baudrate=115200, bytesize=8, parity='N', stopbits=1) as ser:
 
         byte = None
 
@@ -31,7 +52,7 @@ def do_dsm():
             byte = ser.read(1)
             continue
 
-        stdscr = curses.initscr()
+        handler.setup()
 
         while True:
             try:
@@ -45,20 +66,12 @@ def do_dsm():
                 channel_data = get_channel_data(bytes)
                 channel_data = format_channel_data(channel_data)
 
-                s = ''
-                for channel_id, position in channel_data:
-                    s += 'c: {0} {1}\t{2}\n'.format(channel_id, calibration.data[channel_id].name, position)
-                s += '\n'
-                s += '=' * 120
-
-                stdscr.addstr(0, 0, s)
-                stdscr.refresh()
+                handler(channel_data)
 
             except KeyboardInterrupt:
-                curses.endwin()
                 break
 
-        curses.endwin()
+        handler.cleanup()
 
 if __name__ == '__main__':
-    do_dsm()
+    do_dsm(port='/dev/ttyUSB0')
