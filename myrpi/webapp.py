@@ -3,7 +3,10 @@ import os
 import sys
 import daemon
 import argparse
-from daemon.pidlockfile import PIDLockFile
+try:
+    from daemon.pidlockfile import PIDLockFile
+except ImportError:
+    from daemon.pidfile import PIDLockFile
 from wsgiref.simple_server import make_server
 from raspiweb import RaspiWeb
 
