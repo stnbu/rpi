@@ -14,7 +14,7 @@ def get_channel_data(bytes):
         last = byte
 
 
-def format_channel_data(data):
+def normalize_channel_data(data):
     for channel_id, position in data:
         axis = calibration.data[channel_id]
         yield channel_id, axis.get_normalized_position(position)
@@ -32,9 +32,8 @@ class Visualizer(Handler):
     def __call__(self, channel_data):
         s = ''
         for channel_id, position in channel_data:
-            s += 'c: {0} {1}\t{2}\n'.format(channel_id, calibration.data[channel_id].name, position)
+            s += 'cid={0} {1}\t{2}\n'.format(channel_id, calibration.data[channel_id].name, position)
         s += '\n'
-        s += '=' * 120
         self.stdscr.addstr(0, 0, s)
         self.stdscr.refresh()
 
@@ -64,7 +63,7 @@ def do_dsm(port, handler=Visualizer()):
                 bytes = map(ord, bytes)
 
                 channel_data = get_channel_data(bytes)
-                channel_data = format_channel_data(channel_data)
+                channel_data = normalize_channel_data(channel_data)
 
                 handler(channel_data)
 
