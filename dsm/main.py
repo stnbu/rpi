@@ -1,6 +1,7 @@
 import serial
 import curses
 import calibration
+import random
 
 def get_channel_data(bytes):
     for index, byte in enumerate(bytes):
@@ -23,8 +24,16 @@ class Handler(object):
     """Should have __call__, setup, and cleanup methods.
     """
 
+    def setup(self):
+        """Called before the loop that reads channel data.
+        """
 
-class Visualizer(Handler):
+    def cleanup(self):
+        """Called after the loop that reads channel data.
+        """
+
+
+class CursesVisualizer(Handler):
 
     def setup(self):
         self.stdscr = curses.initscr()
@@ -40,6 +49,14 @@ class Visualizer(Handler):
     def cleanup(self):
         curses.endwin()
 
+class Visualizer(Handler):
+
+    def __call__(self, channel_data):
+        if random.randint(0, 10) != 9:  # crude throttling
+            return
+        for _, position in channel_data:
+            print position,
+        print ''
 
 def do_dsm(port, handler=Visualizer()):
 
@@ -53,6 +70,7 @@ def do_dsm(port, handler=Visualizer()):
 
         handler.setup()
 
+        last_channel_data = None
         while True:
             try:
                 bytes = []
@@ -64,13 +82,13 @@ def do_dsm(port, handler=Visualizer()):
 
                 channel_data = get_channel_data(bytes)
                 channel_data = normalize_channel_data(channel_data)
+                # take some pressure off of "handler" and only call if changed.
+                if channel_data != last_channel_data:
+                    handler(channel_data)
+                last_channnel_data = channel_data
 
-                handler(channel_data)
 
             except KeyboardInterrupt:
                 break
 
         handler.cleanup()
-
-if __name__ == '__main__':
-    do_dsm(port='/dev/ttyUSB0')
